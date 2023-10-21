@@ -1,0 +1,18 @@
+<div *ngFor="let student of students">
+    {{ student.name }} - {{ student.age }} years old - Grade: {{ student.grade }}
+  </div>
+  
+  <hr />
+  
+  <h3>Add New Student</h3>
+  <label>Name: </label>
+  <input [(ngModel)]="newStudent.name" /><br />
+  
+  <label>Age: </label>
+  <input type="number" [(ngModel)]="newStudent.age" /><br />
+  
+  <label>Grade: </label>
+  <input [(ngModel)]="newStudent.grade" /><br />
+  
+  <button (click)="addStudent()">Add Student</button>
+  
